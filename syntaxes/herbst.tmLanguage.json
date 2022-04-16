@@ -1,0 +1,135 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "herbst",
+	"patterns": [
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#ignored"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.herbst",
+				"match": "\\b(if|else|loop)\\b",
+				"foreground": ""
+			},
+			{
+				"name": "entity.name.type.herbst",
+				"match": "(\\s#?)?(integer|double|string|boolean|list|flex|callable)\\b"
+			},
+			{
+				"name": "keyword.symbols.herbst",
+				"match": "(@)"
+			},
+			{
+				"name": "keyword.symbols.herbst",
+				"match": "\\b(to|is)\\b"
+			},
+			{
+				"name": "keyword.operator.herbst",
+				"match": "(#|\\+|-|\\*|/|%|\\+\\+|:|::|>|<|>=|<=|and|or|xor|=|!=|\\||\\|\\||\\|\\|\\|)"
+			}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.herbst",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.herbst",
+					"match": "\\\\."
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"name": "keyword.other.unit.herbst",
+					"match": "\\b(true|false|nothing)\\b"
+				}
+			]
+		},
+		"numbers":  {
+			"patterns": [
+				{
+					"name": "constant.numeric.herbst",
+					"match": "\\b\\d+(.\\d+)?\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.herbst",
+					"match": "--.*\\n"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "entity.name.function.herbst",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\!"
+				},
+				{
+					"name": "variable.name.herbst",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				},
+				{
+					"name": "",
+					"match": "\\[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		},
+		"functions" :{
+			"patterns": [
+				{
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(#callable)\\b",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.herbst"
+						},
+						"2": {
+							"name":"entity.name.type.herbst"
+						}
+					}
+				},
+				{
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_\\s]*)\\s*->",
+					"captures": {
+						"1": {
+							"name": "variable.parameter.herbst"
+						}
+					}
+				}
+			]
+		},
+		"ignored": {
+			"name": "ignore",
+			"match": "(\\s+|\\(|\\)|\\{|\\}|,|\\[|\\])"
+		}
+	},
+	"scopeName": "source.herbst"
+}

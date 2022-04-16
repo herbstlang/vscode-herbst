@@ -1,0 +1,38 @@
+{
+    "name": "herbst",
+    "publisher": "herbst",
+    "displayName": "herbst",
+    "description": "language support for herbst",
+    "repository": {
+        "url": "https://github.com/herbstlang/vscode-herbst"
+    },
+    "version": "0.0.3",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages", "Snippets"
+    ],
+    "keywords": [
+        "herbst"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "herbst",
+            "aliases": ["herbst"],
+            "extensions": [".herbst"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "herbst",
+            "scopeName": "source.herbst",
+            "path": "./syntaxes/herbst.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "herbst",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

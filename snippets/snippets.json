@@ -1,0 +1,37 @@
+{
+    "herbst main function": {
+        "prefix": "main",
+        "body": "main #callable: args -> {\n\t$0\n}",
+        "description": "creates an entry point for your program"
+    },
+    "if - else block": {
+        "prefix": "ifelse",
+        "body": "if $0 {\n\t$1\n} else {\n\t$2\n}",
+        "description": "creates an if-else block"
+    },
+    "integer type": {
+        "prefix": "int",
+        "body": "#integer: $0",
+        "description": "integer type"
+    },
+    "string type": {
+        "prefix": "str",
+        "body": "#string: \"$0\"",
+        "description": "string type"
+    },
+    "boolean type": {
+        "prefix": "bln",
+        "body": "#boolean: $0",
+        "description": "boolean type"
+    },
+    "callable type": {
+        "prefix": "clbl",
+        "body": "#callable: $0",
+        "description": "callable type"
+    },
+    "print": {
+        "prefix": "p",
+        "body": "print! \"$0\"",
+        "description": "call print from standard library"
+    }
+}
