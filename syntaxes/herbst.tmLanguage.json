@@ -44,7 +44,7 @@
 			},
 			{
 				"name": "keyword.symbols.herbst",
-				"match": "\\b(to|is)\\b"
+				"match": "\\b(to|incl|is)\\b"
 			},
 			{
 				"name": "keyword.operator.herbst",
